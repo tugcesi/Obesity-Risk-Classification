@@ -75,14 +75,15 @@ if st.button('🔍 Tahmin Et', use_container_width=True):
         'FAVC'                          : 1 if favc == 'yes' else 0,
         'FCVC'                          : fcvc,
         'CAEC'                          : caec_map[caec],
+        'CH2O'                          : ch2o,       # ← buraya taşındı
         'SCC'                           : 1 if scc == 'yes' else 0,
         'FAF'                           : faf,
         'TUE'                           : tue,
         'CALC'                          : calc_map[calc],
         'BMI'                           : bmi,
+        'Weight_Height_Ratio'           : weight_height_ratio,  # ← sona taşındı
         'Active_Score'                  : active_score,
         'Diet_Score'                    : diet_score,
-        'Weight_Height_Ratio'           : weight_height_ratio
     }])
 
     pred        = model.predict(input_data)[0]
